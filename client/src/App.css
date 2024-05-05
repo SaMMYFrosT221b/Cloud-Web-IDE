@@ -1,0 +1,21 @@
+.playground-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container{
+  min-height: 60vh;
+  display: flex;
+}
+
+.file-node{
+  background-color: lightyellow;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+  line-height: 25px;
+}
