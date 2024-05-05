@@ -12,7 +12,8 @@ const Terminal = () =>{
         if(isRendered.current)return;
         isRendered.current=true;
         const term = new XTerminal({
-            rows: 20
+            rows: 50,
+            cols: 100
         });
         term.open(terminalRef.current)
 
@@ -21,9 +22,11 @@ const Terminal = () =>{
             console.log(data);
         })
 
-        socket.on('terminal:data',(data)=>{
+        function onTerminalData(data){
             term.write(data)
-        })
+        }
+
+        socket.on('terminal:data', onTerminalData)
 
     },[])
 

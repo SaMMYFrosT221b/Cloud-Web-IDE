@@ -1,21 +1,38 @@
-.playground-container{
+/* styles.css */
+
+.playground-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.editor-container {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  border-right: 1px solid #ddd;
 }
 
-.editor-container{
-  min-height: 60vh;
-  display: flex;
-}
-
-.file-node{
-  background-color: lightyellow;
-  border-radius: 10px;
+.files {
+  width: 30%;
   padding: 10px;
+  background-color: lightblue;
+}
+.file-node {
+  margin: 10px;
   cursor: pointer;
+  background-color: lightyellow;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-li{
-  list-style: none;
-  line-height: 25px;
+.editor {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.terminal-container {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
 }
